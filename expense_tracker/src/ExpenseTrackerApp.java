@@ -7,8 +7,16 @@ import view.ExpenseTrackerView;
 import model.Transaction;
 import controller.InputValidation;
 
+/**
+ * The main entry point of the Expense Tracker application.
+ * Initializes the MVC components and sets up event handling.
+ */
 public class ExpenseTrackerApp {
-
+  /**
+   * Main method to launch the application.
+   *
+   * @param args command-line arguments (not used)
+   */
   public static void main(String[] args) {
     
     // Create MVC components

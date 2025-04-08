@@ -12,20 +12,30 @@ import model.ExpenseTrackerModel;
 import model.Transaction;
 import view.ExpenseTrackerView;
 
-
+/**
+ * Test class for Expense Tracker application.
+ * Contains unit tests for adding and removing transactions,
+ * and verifying total cost calculations.
+ */
 public class TestExample {
   
   private ExpenseTrackerModel model;
   private ExpenseTrackerView view;
   private ExpenseTrackerController controller;
-
+    /**
+     * Initializes the model, view, and controller before each test.
+     */
   @Before
   public void setup() {
     model = new ExpenseTrackerModel();
     view = new ExpenseTrackerView();
     controller = new ExpenseTrackerController(model, view);
   }
-
+    /**
+     * Calculates the total cost of all transactions in the model.
+     *
+     * @return the sum of transaction amounts
+     */
     public double getTotalCost() {
         double totalCost = 0.0;
         List<Transaction> allTransactions = model.getTransactions(); // Using the model's getTransactions method
@@ -34,9 +44,11 @@ public class TestExample {
         }
         return totalCost;
     }
-    
 
 
+    /**
+     * Tests adding a transaction through the controller and verifies size and total cost.
+     */
     @Test
     public void testAddTransaction() {
         // Pre-condition: List of transactions is empty
@@ -52,7 +64,9 @@ public class TestExample {
         assertEquals(50.00, getTotalCost(), 0.01);
     }
 
-
+    /**
+     * Tests removing a transaction from the model and verifies list size and cost.
+     */
     @Test
     public void testRemoveTransaction() {
         // Pre-condition: List of transactions is empty

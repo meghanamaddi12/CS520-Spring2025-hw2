@@ -11,16 +11,26 @@ import java.text.NumberFormat;
 
 import model.Transaction;
 import java.util.List;
-
+/**
+ * The ExpenseTrackerView class builds the GUI using Java Swing components.
+ * It allows the user to input expense data and view it in a table.
+ */
 public class ExpenseTrackerView extends JFrame {
 
+  /** Table displaying transaction records */
   private JTable transactionsTable;
+  /** Button to add a transaction */
   private JButton addTransactionBtn;
+  /** Field for entering the transaction amount */
   private JFormattedTextField amountField;
+  /** Field for entering the transaction category */
   private JTextField categoryField;
+  /** Table model for updating data in the view */
   private DefaultTableModel model;
-  
 
+  /**
+   * Constructs the ExpenseTrackerView GUI layout.
+   */
   public ExpenseTrackerView() {
     setTitle("Expense Tracker"); // Set title
     setSize(600, 400); // Make GUI larger
@@ -67,6 +77,11 @@ public class ExpenseTrackerView extends JFrame {
   
   }
 
+  /**
+   * Refreshes the table with the latest list of transactions.
+   *
+   * @param transactions the list of transactions to display
+   */
   public void refreshTable(List<Transaction> transactions) {
       // Clear existing rows
       model.setRowCount(0);
@@ -88,21 +103,43 @@ public class ExpenseTrackerView extends JFrame {
       // Fire table update
       transactionsTable.updateUI();
   
-    }  
-  
+    }
 
-  
-  
+
+
+  /**
+   * Returns the button used to add a new transaction.
+   *
+   * @return the Add Transaction JButton
+   */
   public JButton getAddTransactionBtn() {
     return addTransactionBtn;
   }
+
+  /**
+   * Returns the model backing the transactions table.
+   *
+   * @return the DefaultTableModel instance
+   */
   public DefaultTableModel getTableModel() {
     return model;
   }
+
+  /**
+   * Returns the table that displays all transactions.
+   *
+   * @return the JTable used in the view
+   */
+
   // Other view methods
     public JTable getTransactionsTable() {
     return transactionsTable;
   }
+
+  /**
+   * Gets the amount entered by the user.
+   * @return the entered amount as a double
+   */
 
   public double getAmountField() {
     if(amountField.getText().isEmpty()) {
@@ -112,16 +149,27 @@ public class ExpenseTrackerView extends JFrame {
     return amount;
     }
   }
-
+  /**
+   * Sets the formatted amount input field.
+   *
+   * @param amountField the JFormattedTextField for amount input
+   */
   public void setAmountField(JFormattedTextField amountField) {
     this.amountField = amountField;
   }
 
-  
+  /**
+   * Gets the entered category.
+   * @return the category text
+   */
   public String getCategoryField() {
     return categoryField.getText();
   }
-
+  /**
+   * Sets the category input field. (Setter primarily for testing or GUI updates.)
+   *
+   * @param categoryField the text field to set as the category input
+   */
   public void setCategoryField(JTextField categoryField) {
     this.categoryField = categoryField;
   }
