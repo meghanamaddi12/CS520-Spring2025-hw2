@@ -17,24 +17,19 @@ public class InputValidation {
   }
 
   /**
-   * Validates that the amount is within a valid range.
+   * NEW: Checks if a string represents a valid amount.
+   * Accepts strings like "100.0" and verifies they are numeric and within range.
    *
-   * @param amount the transaction amount
-   * @return true if amount is greater than 0 and less than or equal to 1000
+   * @param amountStr the user-entered amount as a string
+   * @return true if it's a valid number between 0 and 1000 (exclusive), false otherwise
    */
-  public static boolean isValidAmount(double amount) {
-    
-    // Check range
-    if(amount >1000) {
+  public static boolean isValidAmount(String amountStr) {
+    try {
+      double amount = Double.parseDouble(amountStr);
+      return amount > 0 && amount < 1000;
+    } catch (NumberFormatException e) {
       return false;
     }
-    if (amount < 0){
-      return false;
-    }
-    if (amount == 0){
-      return false;
-    }
-    return true;
   }
 
   /**

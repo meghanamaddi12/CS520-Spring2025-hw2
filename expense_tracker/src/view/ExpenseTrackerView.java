@@ -11,6 +11,8 @@ import java.text.NumberFormat;
 
 import model.Transaction;
 import java.util.List;
+
+
 /**
  * The ExpenseTrackerView class builds the GUI using Java Swing components.
  * It allows the user to input expense data and view it in a table.
@@ -27,6 +29,12 @@ public class ExpenseTrackerView extends JFrame {
   private JTextField categoryField;
   /** Table model for updating data in the view */
   private DefaultTableModel model;
+
+  // NEW: Filter fields and buttons
+  private JTextField amountSearchField;
+  private JTextField categorySearchField;
+  private JButton searchByAmountBtn;
+  private JButton searchByCategoryBtn;
 
   /**
    * Constructs the ExpenseTrackerView GUI layout.
@@ -51,6 +59,12 @@ public class ExpenseTrackerView extends JFrame {
     JLabel categoryLabel = new JLabel("Category:");
     categoryField = new JTextField(10);
 
+    // NEW: Initialize filtering fields and buttons
+    amountSearchField = new JTextField(6);
+    categorySearchField = new JTextField(6);
+    searchByAmountBtn = new JButton("Search Amount");
+    searchByCategoryBtn = new JButton("Search Category");
+
     // Create table
     transactionsTable = new JTable(model);
   
@@ -61,6 +75,14 @@ public class ExpenseTrackerView extends JFrame {
     inputPanel.add(categoryLabel); 
     inputPanel.add(categoryField);
     inputPanel.add(addTransactionBtn);
+
+    // NEW: Add filter components to panel
+    inputPanel.add(new JLabel("Filter Amount:"));
+    inputPanel.add(amountSearchField);
+    inputPanel.add(searchByAmountBtn);
+    inputPanel.add(new JLabel("Filter Category:"));
+    inputPanel.add(categorySearchField);
+    inputPanel.add(searchByCategoryBtn);
   
     JPanel buttonPanel = new JPanel();
     buttonPanel.add(addTransactionBtn);
@@ -138,17 +160,19 @@ public class ExpenseTrackerView extends JFrame {
 
   /**
    * Gets the amount entered by the user.
-   * @return the entered amount as a double
+   * Safely parses the input, removing commas and handling invalid input gracefully.
+   *
+   * @return the parsed amount, or -1 if the input is not a valid number
    */
-
   public double getAmountField() {
-    if(amountField.getText().isEmpty()) {
-      return 0;
-    }else {
-    double amount = Double.parseDouble(amountField.getText());
-    return amount;
+    String rawInput = amountField.getText().replace(",", "").trim();
+    try {
+      return Double.parseDouble(rawInput);
+    } catch (NumberFormatException e) {
+      return -1; // Indicates invalid input
     }
   }
+
   /**
    * Sets the formatted amount input field.
    *
@@ -172,5 +196,21 @@ public class ExpenseTrackerView extends JFrame {
    */
   public void setCategoryField(JTextField categoryField) {
     this.categoryField = categoryField;
+  }
+  // NEW: Getters for filtering components
+  public JTextField getAmountSearchField() {
+    return amountSearchField;
+  }
+
+  public JTextField getCategorySearchField() {
+    return categorySearchField;
+  }
+
+  public JButton getSearchByAmountBtn() {
+    return searchByAmountBtn;
+  }
+
+  public JButton getSearchByCategoryBtn() {
+    return searchByCategoryBtn;
   }
 }

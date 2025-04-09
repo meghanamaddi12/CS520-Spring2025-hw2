@@ -4,10 +4,14 @@ import view.ExpenseTrackerView;
 
 import java.util.List;
 
+import filter.TransactionFilter; // NEW: Import strategy interface
+
 
 
 import model.ExpenseTrackerModel;
 import model.Transaction;
+
+
 
 /**
  * Controller class for managing interactions between the model and view.
@@ -54,7 +58,7 @@ public class ExpenseTrackerController {
    */
 
   public boolean addTransaction(double amount, String category) {
-    if (!InputValidation.isValidAmount(amount)) {
+    if (!InputValidation.isValidAmount(String.valueOf(amount))) {
       return false;
     }
     if (!InputValidation.isValidCategory(category)) {
@@ -63,10 +67,16 @@ public class ExpenseTrackerController {
     
     Transaction t = new Transaction(amount, category);
     model.addTransaction(t);
-    view.getTableModel().addRow(new Object[]{t.getAmount(), t.getCategory(), t.getTimestamp()});
     refresh();
     return true;
   }
-  
-  // Other controller methods
+  /**
+   * Applies a given filter strategy and updates the view with filtered transactions.
+   *
+   * @param filter The filter strategy to apply.
+   */
+  public void applyFilter(TransactionFilter filter) {
+    List<Transaction> filtered = filter.filter(model.getTransactions()); // ✅ Strategy in action!
+    view.refreshTable(filtered);
+  }
 }
