@@ -16,9 +16,9 @@ public class TestImmutableModel {
         // Try modifying the returned list
         try {
             externalList.add(new Transaction(50, "travel"));
-            System.out.println("❌ Failed: List is still mutable!");
+            System.out.println("Failed: List is still mutable!");
         } catch (UnsupportedOperationException e) {
-            System.out.println("✅ Passed: List is immutable.");
+            System.out.println("Passed: List is immutable.");
         }
     }
 }

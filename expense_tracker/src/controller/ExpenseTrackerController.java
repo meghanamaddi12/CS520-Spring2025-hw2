@@ -76,7 +76,7 @@ public class ExpenseTrackerController {
    * @param filter The filter strategy to apply.
    */
   public void applyFilter(TransactionFilter filter) {
-    List<Transaction> filtered = filter.filter(model.getTransactions()); // ✅ Strategy in action!
+    List<Transaction> filtered = filter.filter(model.getTransactions());
     view.refreshTable(filtered);
   }
 }
