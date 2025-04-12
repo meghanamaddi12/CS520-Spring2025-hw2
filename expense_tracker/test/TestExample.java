@@ -59,7 +59,11 @@ public class TestExample {
     
         // Post-condition: List of transactions contains one transaction
         assertEquals(1, model.getTransactions().size());
-    
+
+        //print:
+        System.out.println("Added Transaction: Amount = 50.0, Category = food");
+        System.out.println("Total cost after addition: " + getTotalCost());
+
         // Check the contents of the list
         assertEquals(50.00, getTotalCost(), 0.01);
     }
@@ -85,6 +89,10 @@ public class TestExample {
         // Post-condition: List of transactions is empty
         List<Transaction> transactions = model.getTransactions();
         assertEquals(0, transactions.size());
+
+        // print
+        System.out.println("Transaction removed. Remaining transactions: " + transactions.size());
+        System.out.println("Total cost after removal: " + getTotalCost());
     
         // Check the total cost after removing the transaction
         double totalCost = getTotalCost();

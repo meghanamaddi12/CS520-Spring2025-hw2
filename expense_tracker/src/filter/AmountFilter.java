@@ -24,7 +24,7 @@ public class AmountFilter implements TransactionFilter {
     public List<Transaction> filter(List<Transaction> transactions) {
         List<Transaction> filtered = new ArrayList<>();
         for (Transaction t : transactions) {
-            if (t.getAmount() <= maxAmount) {
+            if (t.getAmount() == maxAmount) {
                 filtered.add(t);
             }
         }
