@@ -1,21 +1,131 @@
-* 15ac349 Update git_log.txt with latest commit history
-* a0c77b2 Converted tests to JUnit 4 and added console output
-* cb85023 Final submission: organized files into expense_tracker as per submission format
-* e0a2b34 Added final Git commit log file
-* 9a3ff53 Finalized README with project structure, features, and documentation details
-* 52cbdd5 Removed out/ directory from tracking as per .gitignore
-* c7db957 Documentation: generated updated Javadoc for all classes
-* ff41832 Refactored: Moved TestImmutableModel (verifies immutability of model's transaction list) to test/controller for modular project structure
-* 8801159 Added undo functionality design document
-* ea0fce2 Testability: updated AmountFilter and test files, added test screenshot
-* 080fb78 Implement extensibility: strategy design pattern with filters and input validation (Modified comment)
-* 84f53cf Implement extensibility: strategy design pattern with filters and input validation
-* 10db524 Applied Open-Closed Principle: made Transaction class immutable, removed setters, hid fields, and returned unmodifiable list
-* 9ad4c91 Added git log file
-* c633273 Added generated Javadoc for HW2
-* efd7914 Updated README for HW2: Added features, tests, design principles
-* b21da9f Build file update
-* ccabaff File Update
-* 2574c71 Total Cost and Serial update
-* d29d2c8 HW2 template files
-* 6a51d80 Initial commit
+commit a258bce9793db457c170c9a932c695fa5cb4f3ac
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sun Apr 13 00:27:57 2025 -0400
+
+    Updated git_log.txt inside expense_tracker with latest commit history
+
+commit 15ac349cb99ae46f39d4fbe0236ba38518a73663
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sun Apr 13 00:17:32 2025 -0400
+
+    Update git_log.txt with latest commit history
+
+commit a0c77b2b1c8e0e78583b124e31b084e71f8314e7
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sun Apr 13 00:10:53 2025 -0400
+
+    Converted tests to JUnit 4 and added console output
+
+commit cb85023d66c7b4ec6697f83386e2264bb058e961
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sat Apr 12 23:22:15 2025 -0400
+
+    Final submission: organized files into expense_tracker as per submission format
+
+commit e0a2b343c391c5448ce9a925805f94e27e02697c
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sat Apr 12 23:00:16 2025 -0400
+
+    Added final Git commit log file
+
+commit 9a3ff537b53958af8a728e138f2e4c128dabee79
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sat Apr 12 22:57:39 2025 -0400
+
+    Finalized README with project structure, features, and documentation details
+
+commit 52cbdd5027bdaf7d2147718c84722497e0b4523e
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sat Apr 12 22:44:49 2025 -0400
+
+    Removed out/ directory from tracking as per .gitignore
+
+commit c7db95743f526dcc226a39458bbd91e2ad6724e3
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sat Apr 12 22:27:45 2025 -0400
+
+    Documentation: generated updated Javadoc for all classes
+
+commit ff418327d4f9f767e5de3fa06890f42d1ebe9cf9
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sat Apr 12 22:15:09 2025 -0400
+
+    Refactored: Moved TestImmutableModel (verifies immutability of model's transaction list) to test/controller for modular project structure
+
+commit 8801159c4e01f33c36827983747bfe670ec749a9
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sat Apr 12 21:58:47 2025 -0400
+
+    Added undo functionality design document
+
+commit ea0fce294e78a650b01b8fdc5ecb4cdbf76b57d7
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sat Apr 12 12:26:01 2025 -0400
+
+    Testability: updated AmountFilter and test files, added test screenshot
+
+commit 080fb78b57faad5916177ba9cacfa7accac1d63f
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Wed Apr 9 17:19:37 2025 -0400
+
+    Implement extensibility: strategy design pattern with filters and input validation (Modified comment)
+
+commit 84f53cf303acadfe99eb36e351ea868d330b8616
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Wed Apr 9 17:12:27 2025 -0400
+
+    Implement extensibility: strategy design pattern with filters and input validation
+
+commit 10db52445d5319dde0b56d1668d48c6691706548
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Mon Apr 7 21:24:26 2025 -0400
+
+    Applied Open-Closed Principle: made Transaction class immutable, removed setters, hid fields, and returned unmodifiable list
+
+commit 9ad4c91663e626a2de3f437f24ce50796e0ec54f
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sun Apr 6 19:02:13 2025 -0400
+
+    Added git log file
+
+commit c633273867aae6c5fc712405a6f0be1fd41bc31a
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sun Apr 6 18:57:39 2025 -0400
+
+    Added generated Javadoc for HW2
+
+commit efd791468750a1077a99b23e456625a2969ec517
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date: Sun Apr 6 16:54:17 2025 -0400
+
+    Updated README for HW2: Added features, tests, design principles
+
+commit b21da9fb7fd47c25881d7fc014a932365cb1552b
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date: Sat Sep 2 02:42:57 2023 -0400
+
+    Build file update
+
+commit ccabaffc7ff1b7098979a63fcbadf48bc04915c3
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date: Tue Aug 29 14:49:22 2023 -0400
+
+    File Update
+
+commit 2574c71001a74c29f01f4a84fa99f450158f2f10
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date: Wed Aug 9 14:11:14 2023 -0400
+
+    Total Cost and Serial update
+
+commit d29d2c8acb4145ce700e0456ccc334da0cad3dc2
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date: Wed Aug 9 12:54:46 2023 -0400
+
+    HW2 template files
+
+commit 6a51d8019c39a33d581ce078ae8887a022ee806d
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date: Tue Aug 8 21:48:41 2023 -0400
+
+    Initial commit
