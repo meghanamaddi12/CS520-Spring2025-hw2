@@ -31,9 +31,21 @@ public class ExpenseTrackerView extends JFrame {
   private DefaultTableModel model;
 
   // NEW: Filter fields and buttons
+  /**
+   * Search field for filtering by amount.
+   */
   private JTextField amountSearchField;
+  /**
+   * Search field for filtering by amount.
+   */
   private JTextField categorySearchField;
+  /**
+   * Button to trigger filtering by amount.
+   */
   private JButton searchByAmountBtn;
+  /**
+   * Button to trigger filtering by category.
+   */
   private JButton searchByCategoryBtn;
 
   /**
@@ -198,18 +210,32 @@ public class ExpenseTrackerView extends JFrame {
     this.categoryField = categoryField;
   }
   // NEW: Getters for filtering components
+
+  /**
+   * Returns the text field for amount search input.
+   * @return JTextField for entering amount filter
+   */
   public JTextField getAmountSearchField() {
     return amountSearchField;
   }
-
+  /**
+   * Returns the text field for category search input.
+   * @return JTextField for entering category filter
+   */
   public JTextField getCategorySearchField() {
     return categorySearchField;
   }
-
+  /**
+   * Returns the button used to search by amount.
+   * @return JButton that triggers amount-based filtering
+   */
   public JButton getSearchByAmountBtn() {
     return searchByAmountBtn;
   }
-
+  /**
+   * Returns the button used to search by category.
+   * @return JButton that triggers category-based filtering
+   */
   public JButton getSearchByCategoryBtn() {
     return searchByCategoryBtn;
   }

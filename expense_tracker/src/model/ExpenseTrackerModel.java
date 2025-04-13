@@ -46,5 +46,18 @@ public class ExpenseTrackerModel {
   public List<Transaction> getTransactions() {
     return Collections.unmodifiableList(new ArrayList<>(transactions)); // CHANGED: Return immutable copy
   }
+  /**
+   * Calculates the total cost of all transactions.
+   *
+   * @return the sum of all transaction amounts
+   */
+  public double getTotalCost() {
+    double total = 0.0;
+    for (Transaction t : transactions) {
+      total += t.getAmount();
+    }
+    return total;
+  }
+
 
 }

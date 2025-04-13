@@ -1,59 +1,109 @@
-#  Expense Tracker App
+# CS520 Spring 2025 - Homework 2: Expense Tracker
 
-A simple desktop application built using Java Swing and structured with the **Model-View-Controller (MVC)** architecture. This app allows users to add categorized expenses and view them in a summary table with a running total.
+## Overview
+
+This Java-based Expense Tracker application is designed to demonstrate core software engineering principles such as modularity, extensibility, testability, and maintainability using the **Model-View-Controller (MVC)** pattern. The app allows users to add, view, and filter financial transactions based on category and amount.
+
+---
+
+## Features Implemented
+
+### Add Transaction
+- Allows the user to add a transaction with a valid amount and predefined category.
+- Input validation ensures the amount is within [0, 1000] and the category is one of: `food`, `travel`, `bills`, `entertainment`, or `other`.
+
+### View Transaction List
+- Displays a list of all added transactions.
+- Automatically calculates and displays the total cost.
+
+### Filter Functionality (Extensibility)
+- **Strategy Design Pattern** used to support extensible filtering.
+- Filters implemented:
+    - By **Amount** (returns transactions with exact match)
+    - By **Category** (returns transactions in selected category)
+- New filters can be added without modifying the core filtering interface.
+
+### Input Validation
+- Invalid inputs (e.g., negative amount or unknown category) are rejected.
+- Application handles errors gracefully without crashing or altering stored data.
+
+---
+
+## Software Design Principles Applied
+
+### Modularity: Open-Closed Principle
+- Transactions are encapsulated and immutable.
+- Internal list of transactions is returned as a **copy** to prevent external modification.
+
+### Extensibility: Strategy Pattern
+- `TransactionFilter` interface supports pluggable filter logic.
+- New filters can be added independently of the controller logic.
+
+### Testability
+- 4 new test cases added:
+    1. Add Transaction
+    2. Invalid Input Handling
+    3. Filter by Amount
+    4. Filter by Category
+- Existing test cases continue to pass.
+- Tests include **print statements** for visual validation of expected behavior.
+- JUnit-based test suite included in `test/` folder.
+
+---
+
+## Undo Design Plan (Usability)
+
+Although not implemented, the design for an **Undo functionality** has been proposed and documented in `undo.pdf`, following the MVC structure:
+- `Model`: Uses a `Stack<Transaction>` to support undoing the last removed transaction.
+- `Controller`: Exposes a `handleUndo()` method.
+- `View`: Provides an “Undo” button to trigger the undo action.
+
+---
+
+## Project Structure
+
+hw2_expensetracker:
+    .idea/: {}
+    expense_tracker/:
+        lib/: {}
+        src/:
+            controller/:
+            filter/:        
+            model/:
+           view/:
+        test/:
+        jdoc/: # Generated JavaDoc HTML files
+        build.xml: {}
+        README.md: {}
+        hw2.iml: {}
+        test_screenshot.png: {}
+        undo.pdf: {}
 
 
-##  Project Structure (MVC)
 
-- **Model**
-  - `Transaction`: Represents an individual transaction (amount, category, timestamp).
-  - `ExpenseTrackerModel`: Manages a list of transactions and provides methods to add/remove/get them.
+---
 
-- **View**
-  - `ExpenseTrackerView`: The user interface built using `JFrame`, including text fields, buttons, and a table.
+## JavaDoc
 
-- **Controller**
-  - `ExpenseTrackerController`: Connects the model and view, processes input, and applies validation.
-  - `InputValidation`: Validates user input (amounts must be numeric and ≤ 1000; category must be one of predefined valid words).
+- Documentation auto-generated using:
+  javadoc -d jdoc/ -sourcepath expense_tracker/src controller filter model view
+- All public-facing methods are documented. 
+- Remaining warnings are due to private GUI components and can be safely ignored
 
+---
 
-##  Features
-
-- Add expenses with amount and category
-- Input validation for amount and category  *(NEW in HW2)*
-- Display transactions in a dynamic table
-- View running total of all expenses
-- Simple error messages via dialog boxes
-- Predefined valid categories: `food`, `travel`, `bills`, `entertainment`, `other`
-- Separation using MVC pattern  *(Improved in HW2)*
-- Test cases for model/controller logic using JUnit  *(NEW in HW2)*
+## How to Run
 
 
-##  Tests Added (JUnit)
-
-All tests are located in `test/TestExample.java`.
-
--  Add transaction and update total
--  Remove transaction and verify total is updated
--  Validate input range (amount > 1000, invalid category)
--  Verify transaction list size after actions
+1. Compile the project using IntelliJ or `javac` via terminal.
+2. Run `ExpenseTrackerApp` to launch the GUI.
+3. Use the JUnit test runner or IntelliJ's test window to execute all tests.
 
 
-##  Design Principles Used
+---
 
-- **Model-View-Controller (MVC)**: Separates data, view, and controller responsibilities.
-- **Open-Closed Principle**: Code is written to be extensible without modification.
-- *(Strategy pattern planned if filters are added)*
+## Author
+Meghana Maddipatla  
+CS520 Spring 2025  
+University of Massachusetts Amherst
 
-
-##  Java Version
-
-This project was compiled using:
-
-```bash
-openjdk version "23.0.2" 2025-01-21
-
-## How To Run the Application
-cd expense_tracker/src
-javac ExpenseTrackerApp.java
-java ExpenseTrackerApp
