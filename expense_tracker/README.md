@@ -48,7 +48,8 @@ This Java-based Expense Tracker application is designed to demonstrate core soft
 - Existing test cases continue to pass.
 - Tests include **print statements** for visual validation of expected behavior.
 - JUnit-based test suite included in `test/` folder.
-
+- A standalone test class `TestImmutableModel` is included to verify that the internal transaction list in the model remains immutable. It attempts to externally modify the returned list and expects an `UnsupportedOperationException`, confirming that the list is unmodifiable. This demonstrates adherence to encapsulation and protects the internal model state from accidental external changes.
+git 
 ---
 
 ## Undo Design Plan (Usability)
@@ -82,6 +83,9 @@ hw2_expensetracker:
 
 
 ---
+
+## Submission Notes
+- `git_log.txt` (included in the project root and inside `expense_tracker/`) captures the full commit history with author, timestamp, and commit message, demonstrating incremental development and version tracking.
 
 ## JavaDoc
 
