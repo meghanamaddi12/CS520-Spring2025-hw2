@@ -4,12 +4,6 @@ Date: Sun Apr 13 00:27:57 2025 -0400
 
     Updated git_log.txt inside expense_tracker with latest commit history
 
-commit 15ac349cb99ae46f39d4fbe0236ba38518a73663
-Author: meghanamaddi12 <meghanamaddi@umass.edu>
-Date: Sun Apr 13 00:17:32 2025 -0400
-
-    Update git_log.txt with latest commit history
-
 commit a0c77b2b1c8e0e78583b124e31b084e71f8314e7
 Author: meghanamaddi12 <meghanamaddi@umass.edu>
 Date: Sun Apr 13 00:10:53 2025 -0400
@@ -22,11 +16,6 @@ Date: Sat Apr 12 23:22:15 2025 -0400
 
     Final submission: organized files into expense_tracker as per submission format
 
-commit e0a2b343c391c5448ce9a925805f94e27e02697c
-Author: meghanamaddi12 <meghanamaddi@umass.edu>
-Date: Sat Apr 12 23:00:16 2025 -0400
-
-    Added final Git commit log file
 
 commit 9a3ff537b53958af8a728e138f2e4c128dabee79
 Author: meghanamaddi12 <meghanamaddi@umass.edu>
