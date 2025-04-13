@@ -1,7 +1,101 @@
-c633273 meghanamaddi12 2025-04-06 Added generated Javadoc for HW2
-efd7914 meghanamaddi12 2025-04-06 Updated README for HW2: Added features, tests, design principles
-b21da9f Mahbuba Tasmin 2023-09-02 Build file update
-ccabaff Mahbuba Tasmin 2023-08-29 File Update
-2574c71 Mahbuba Tasmin 2023-08-09 Total Cost and Serial update
-d29d2c8 Mahbuba Tasmin 2023-08-09 HW2 template files
-6a51d80 Mahbuba Tasmin 2023-08-08 Initial commit
+commit 9a3ff537b53958af8a728e138f2e4c128dabee79
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Sat Apr 12 22:57:39 2025 -0400
+
+    Finalized README with project structure, features, and documentation details
+
+commit 52cbdd5027bdaf7d2147718c84722497e0b4523e
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Sat Apr 12 22:44:49 2025 -0400
+
+    Removed out/ directory from tracking as per .gitignore
+
+commit c7db95743f526dcc226a39458bbd91e2ad6724e3
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Sat Apr 12 22:27:45 2025 -0400
+
+    Documentation: generated updated Javadoc for all classes
+
+commit ff418327d4f9f767e5de3fa06890f42d1ebe9cf9
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Sat Apr 12 22:15:09 2025 -0400
+
+    Refactored: Moved TestImmutableModel (verifies immutability of model's transaction list) to test/controller for modular project structure
+
+commit 8801159c4e01f33c36827983747bfe670ec749a9
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Sat Apr 12 21:58:47 2025 -0400
+
+    Added undo functionality design document
+
+commit ea0fce294e78a650b01b8fdc5ecb4cdbf76b57d7
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Sat Apr 12 12:26:01 2025 -0400
+
+    Testability: updated AmountFilter and test files, added test screenshot
+
+commit 080fb78b57faad5916177ba9cacfa7accac1d63f
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Wed Apr 9 17:19:37 2025 -0400
+
+    Implement extensibility: strategy design pattern with filters and input validation (Modified comment)
+
+commit 84f53cf303acadfe99eb36e351ea868d330b8616
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Wed Apr 9 17:12:27 2025 -0400
+
+    Implement extensibility: strategy design pattern with filters and input validation
+
+commit 10db52445d5319dde0b56d1668d48c6691706548
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Mon Apr 7 21:24:26 2025 -0400
+
+    Applied Open-Closed Principle: made Transaction class immutable, removed setters, hid fields, and returned unmodifiable list
+
+commit 9ad4c91663e626a2de3f437f24ce50796e0ec54f
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Sun Apr 6 19:02:13 2025 -0400
+
+    Added git log file
+
+commit c633273867aae6c5fc712405a6f0be1fd41bc31a
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Sun Apr 6 18:57:39 2025 -0400
+
+    Added generated Javadoc for HW2
+
+commit efd791468750a1077a99b23e456625a2969ec517
+Author: meghanamaddi12 <meghanamaddi@umass.edu>
+Date:   Sun Apr 6 16:54:17 2025 -0400
+
+    Updated README for HW2: Added features, tests, design principles
+
+commit b21da9fb7fd47c25881d7fc014a932365cb1552b
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date:   Sat Sep 2 02:42:57 2023 -0400
+
+    Build file update
+
+commit ccabaffc7ff1b7098979a63fcbadf48bc04915c3
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date:   Tue Aug 29 14:49:22 2023 -0400
+
+    File Update
+
+commit 2574c71001a74c29f01f4a84fa99f450158f2f10
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date:   Wed Aug 9 14:11:14 2023 -0400
+
+    Total Cost and Serial update
+
+commit d29d2c8acb4145ce700e0456ccc334da0cad3dc2
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date:   Wed Aug 9 12:54:46 2023 -0400
+
+    HW2 template files
+
+commit 6a51d8019c39a33d581ce078ae8887a022ee806d
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date:   Tue Aug 8 21:48:41 2023 -0400
+
+    Initial commit
